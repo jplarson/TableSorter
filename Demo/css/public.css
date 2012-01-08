@@ -1,0 +1,231 @@
+/**************************************************************
+/* public.css
+/* jpl 11/06/09
+/*
+/*	Front end styles
+/*************************************************************/
+
+
+/*------------------------------------------------------------------------------*/
+/* SECTION::Global HTML Resets */
+
+html {
+	padding:				0;
+	margin:					0;
+}
+
+body {
+	text-align:				center;
+	padding:				0;
+	margin:					20px 20px 20px 100px;
+	background:				#000;
+	font-family:			Tahoma, Verdana, Arial, Sans-Serif;
+	font-size:				15px;
+	color:					#FFF79F;
+}
+
+/* End SECTION::Global HTML Resets
+/*------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------*/
+/* SECTION::Main window and pages within  */
+
+.mainWindow {
+	height:					450px;
+	width:					500px;
+	background:				#fff;
+	padding:				20px;
+	-moz-border-radius:		20px;
+	-webkit-border-radius:	20px;
+	margin:					auto;
+	-moz-user-select:		none;
+	-webkit-user-select:	none;
+}
+
+.mainWindow #viewPort {
+	height:					100%;
+	width:					100%;
+	overflow:				hidden;
+	background:				#000;
+	-moz-border-radius:		15px;
+	-webkit-border-radius:	15px;
+}
+
+.mainWindow #viewPort .page {
+	position:				relative;
+	height:					450px;
+	width:					500px;
+	background:				#A00;
+	background:				-moz-linear-gradient(top, #900, #C00 30%, #400 90%);
+	background:				-webkit-gradient(linear, left top, left bottom, color-stop(0, #900000), color-stop(0.3, #c00000), color-stop(0.9, #400000));
+	filter:					progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#A00000, endColorstr=#400000);
+	-ms-filter:				"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#A00000, endColorstr=#400000)";
+	font-size:				16px;
+	float:					left;
+	border-radius:			15px;
+	text-align:				left;
+}
+
+.mainWindow .page .inner {
+	padding:			20px 20px;
+}
+
+.page .pageContent {
+	margin-top:				30px;
+	background:				#400;
+	background:				-moz-linear-gradient(top, #300, #500 30%, #200 90%);
+	background:				-webkit-gradient(linear, left top, left bottom, color-stop(0, #300000), color-stop(0.3, #500000), color-stop(0.9, #200000));
+	filter:					progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#600000, endColorstr=#200000);
+	-ms-filter:				"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#600000, endColorstr=#200000)";
+	border-radius:			15px;
+	padding:				10px 10px 10px 10px;
+	height:					300px;
+}
+
+/* End SECTION::Main window and pages within
+/*------------------------------------------------------------------------------*/
+	
+
+/*------------------------------------------------------------------------------*/
+/* SECTION::Data Tables  */
+	
+table.data {
+	border:				1px solid #dbdbdb;
+	background:			#fff;
+	border-collapse:	collapse;
+	color:				#333333;
+	text-align:			left;
+}
+table.data th {
+	background:			#f3f3f3 url(../images/headerRowBG.gif) 0 0 repeat-x;
+	padding:			0px 2px 2px 4px;
+	height:				22px;
+	border:				1px solid #dbdbdb;
+}
+
+table.data th.sortAsc {
+	background:			#a8d4e3 url(../images/headerRowBGSortAsc.png) 100% 0 repeat-x;
+	color:				#fff;
+}
+table.data th.sortDesc {
+	background:			#a8d4e3 url(../images/headerRowBGSortDesc.png) 100% 0 repeat-x;
+	color:				#fff;
+}
+
+table.data td {
+	padding:			3px 2px 5px 7px;
+	border:				1px solid #dbdbdb;
+}
+table.data tbody {
+	font-size:			12px;
+}
+
+table.data tr.even td, table.data tr:nth-child(2n) td  {
+	background:			#f5f5f5;
+}
+
+
+/* End SECTION::Data Tables
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------*/
+/* SECTION::Buttons  */
+a.button, input[type=submit], input[type=button] {
+	font-size: 14px;
+	margin-right: 10px;
+	display: inline-block;
+	background:#fff;
+	border:1px solid #757575;
+	text-align:center;
+	white-space:			nowrap;
+	-moz-user-select:		none;
+	-webkit-user-select:	none;
+	line-height: 14px !important;
+	text-decoration:none;
+	color:#000;
+	padding:3px 10px;
+	cursor: pointer;
+	border-radius:11px;-webkit-border-radius:11px;-moz-border-radius:11px;
+	-moz-box-sizing: content-box;
+	-moz-box-shadow:
+		2px 2px 3px rgba(0, 0, 0, .2),
+		0px 0px 3px rgba(0, 0, 0, .1),
+		inset 2px -9px 5px #fff,
+		inset 0px -10px 6px #aaa,
+		inset 0px 0px 2px #444
+}
+input[type=submit], input[type=button] {
+	padding: 0 5px 1px 5px;
+}
+a.button:hover, input[type=submit]:hover, input[type=button]:hover {
+	-moz-box-shadow:
+		inset 2px -9px 5px #fff,
+		inset 0px -10px 6px #aaa,
+		inset 0px 0px 2px #444,
+		2px 2px 3px rgba(0, 0, 0, .2),
+		0px 0px 5px #669DDD;
+	-webkit-box-shadow:
+		inset 2px -9px 5px #fff,
+		inset 0px -10px 6px #aaa,
+		inset 0px 0px 2px #444,
+		2px 2px 3px rgba(0, 0, 0, .2),
+		0px 0px 5px #669DDD;
+}
+a.button:active, input[type=submit]:active, input[type=button]:active {
+	background:#fff;
+	-moz-box-shadow:
+		inset 0px -3px 5px #b1e5f1,
+		inset 0px -10px 6px #4182c3,
+		inset 0px 0px 2px #444,
+		2px 2px 3px rgba(0, 0, 0, .2),
+		0px 0px 5px #669DDD;
+	-webkit-box-shadow:
+		inset 0px -3px 5px #b1e5f1,
+		inset 0px -10px 6px #4182c3,
+		inset 0px 0px 2px #444,
+		2px 2px 3px rgba(0, 0, 0, .2),
+		0px 0px 5px #669DDD;
+}
+
+/* End SECTION::Buttons
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------*/
+/* SECTION::Universal Utility  */
+	
+	.left       { float: left; }			td.left			{ text-align: left;  float: none; }
+	.right      { float: right;}			td.right		{ text-align: right; float: none; }
+	.clear      { clear: both; }
+	
+	.inline		{ display: inline; }
+	.block		{ display: block; }
+	.inlineBlock{ display: inline-block; }
+	
+	.justify	{ text-align: justify; }
+	.bold		{ font-weight: 900; }
+	.relative	{ position: relative; }
+	.absolute	{ position: absolute; }
+	.clickable	{ cursor: pointer; }
+	
+	.center     { text-align: center; }				/* CENTER elements contained by me  */
+	.centered   { display: block; margin: 0 auto; } /* make me CENTERED in my container */
+	
+	.verticalMiddle td, td.verticalMiddle	{ vertical-align: middle; }
+	div.verticalMiddle						{ vertical-align: middle; }
+	.verticalMiddle>*						{ vertical-align: middle; }
+	
+	.hidden     	{ display: none; }
+	.truncatedText	{ overflow: hidden; }
+	.hideOverflow	{ overflow: hidden; }
+	
+	.nextElement	{ margin-top:  6px; }
+	.nextSection	{ margin-top: 16px; }
+	
+/* End SECTION::Universal Utility
+/*------------------------------------------------------------------------------*/
+
