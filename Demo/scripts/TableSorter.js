@@ -22,20 +22,19 @@ var TableSorter = new Class({
 	Implements: [Options, Events],
 	
 	options: {
-		headerRowCount:		1,
-		rowsPerRecord:		1,
-		headerAscClass:		'sortAsc',
-		headerDescClass:	'sortDesc',
-		sortDirection:  	'asc',
-		sortColumn:    		-1,
-		cookieName:			null,
-		cookieDays:			999,
-		includeTitles:		true,
-		titleFormula:		'Sort by [headerText]',
-		titleSet:			null,
-		footerRowClass:		'footer',
-		exemptRowClass:		'sortExempt',
-		columnDataTypes:	[] // money, int, numeric, number, real, date, datetime checkbox, select, input, img, image
+		rowsPerRecord:			1,
+		headerAscClass:			'sortAsc',
+		headerDescClass:		'sortDesc',
+		sortDirection:  		'asc',
+		sortColumn:    			-1,
+		cookieName:				null,
+		cookieDays:				999,
+		includeTitles:			true,
+		titleFormula:			'Sort by [headerText]',
+		titleSet:				null,
+		footerRowClass:			'footer',
+		exemptRowClass:			'sortExempt',
+		columnDataTypes:		[] // money, int, numeric, number, real, date, datetime checkbox, select, input, img, image
 	},
 	
 	initialize: function(table, options) {
@@ -82,7 +81,7 @@ var TableSorter = new Class({
 		//			dataSet:	array of comparable-ready raw data values, one per column
 		//		}
 		var trSet = this.table.getElements('tr');
-		for(var h = 0; h < this.options.headerRowCount; h++) { trSet.shift(); } // fast forward past header row(s)
+		trSet.shift(); // take off the header row
 		this.recordSet = [];
 		this.footerRowSet = [];
 		while (trSet.length > 0) {

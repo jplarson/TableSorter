@@ -41,7 +41,6 @@ var TableSorter = new Class({
 		
 		if(!document.id(table)) throw('Unknown table passed to TableSorter contructor (' + table + ')');
 		this.table = document.id(table);
-		console.log(this.table);
 		this.setOptions(options);
 		
 		// Build our set of data types--hints for comparison operations:
