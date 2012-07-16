@@ -34,6 +34,8 @@ var TableSorter = new Class({
 		titleSet:				null,
 		footerRowClass:			'footer',
 		exemptRowClass:			'sortExempt',
+		isCaseSensitive:		false, 
+		dateParseFunction:		Date.parse, 
 		columnDataTypes:		[] // money, int, numeric, number, real, date, datetime checkbox, select, input, img, image
 	},
 	
@@ -115,7 +117,7 @@ var TableSorter = new Class({
 								pureData = null;
 							break;
 						case 'date': case 'datetime':
-							pureData = Date.parse(rawData);
+							pureData = this.options.dateParseFunction(rawData);
 							break;
 						case 'checkbox':
 							var theCheckbox = $(thisRecordRow.getChildren()[c]).getElement('input[type=checkbox]');
@@ -135,7 +137,7 @@ var TableSorter = new Class({
 							break;
 
 						default:
-							pureData = rawData.trim();
+							pureData = (this.options.isCaseSensitive ? rawData : rawData.toLowerCase()).trim();
 					}
 					thisDataSet[c] = pureData;
 				}

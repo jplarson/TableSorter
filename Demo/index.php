@@ -1,15 +1,7 @@
 <?
 
-	switch($_REQUEST['a']) {
-		case 'time':	DisplayTime();		break;
-		default:		DisplayDemoPage();
-	}
-	exit();
+	DisplayDemoPage();
 
-
-function DisplayTime() {
-	echo "It is now " . date('m/d/y, g:i:sa') . ".";
-}
 
 function DisplayDemoPage() {
 ?>
@@ -54,12 +46,15 @@ function DisplayDemoPage() {
     <tr><td>12</td><td>Moustache Comb</td><td>10/13/1987 1:17 pm</td><td>$1.15</td><td class="center"><input type="checkbox" checked /></td></tr>
     <tr><td>13</td><td>Desk Lamp</td><td>12/27/2010 4:56 pm</td><td>$29.95</td><td class="center"><input type="checkbox" /></td></tr>
     <tr><td>14</td><td>Argentine Prime Rib</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
+    <tr><td>15</td><td>apples</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
+    <tr><td>16</td><td>berries</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
   </table>
  </div>
   
 <script type="text/javascript">
 	window.addEvent('domready', function() {
-		sorter = new TableSorter('dataTable', { cookieName: 'tableSort', columnDataTypes: 'int, string, date, money, checkbox' });
+		sorter = new TableSorter('dataTable', { cookieName: 'tableSort', isCaseSensitive: false,
+			columnDataTypes: 'int, string, date, money, checkbox' });
 	});
 </script>
 </body>
