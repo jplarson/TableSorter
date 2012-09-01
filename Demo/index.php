@@ -46,8 +46,8 @@ function DisplayDemoPage() {
     <tr><td>12</td><td>Moustache Comb</td><td>10/13/1987 1:17 pm</td><td>$1.15</td><td class="center"><input type="checkbox" checked /></td></tr>
     <tr><td>13</td><td>Desk Lamp</td><td>12/27/2010 4:56 pm</td><td>$29.95</td><td class="center"><input type="checkbox" /></td></tr>
     <tr><td>14</td><td>Argentine Prime Rib</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
-    <tr><td>15</td><td>apples</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
-    <tr><td>16</td><td>berries</td><td>11/16/2009 9:25 pm</td><td>$6.54</td><td class="center"><input type="checkbox" checked /></td></tr>
+    <tr><td>15</td><td>apples</td><td>09/20/1979 7:07 am</td><td>$2.99</td><td class="center"><input type="checkbox" checked /></td></tr>
+    <tr><td>16</td><td>berries</td><td>7/15/2012 12:41 pm</td><td>$4.99</td><td class="center"><input type="checkbox" checked /></td></tr>
   </table>
  </div>
   

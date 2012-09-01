@@ -201,13 +201,15 @@ var TableSorter = new Class({
 			}
 		}.bind(this));
 		
+		// Remixed to support sorting by several columns, thanks MooShu!	
 		this.recordSet.sort(function(r1, r2) {
 			var c1 = r1.dataSet[sortColumn];
 			var c2 = r2.dataSet[sortColumn];
-			return (c1 < c2 ? -1 : (c2 < c1 ? 1 : 0));
+			if(sortDirection == 'asc')
+				return (c1 < c2 ? -1 : (c2 < c1 ? 1 : 0))
+			else
+				return (c2 < c1 ? -1 : (c1 < c2 ? 1 : 0));
 		});
-		if(sortDirection == 'desc')
-			this.recordSet.reverse();
 		
 		// Now to rebuild the DOM according to our newly-sorted recordSet:
 		this.recordSet.each(function(theRecord, index) {

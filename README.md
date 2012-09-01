@@ -60,9 +60,10 @@ There are a few options of TableSorter to customize its behavior:
 - cookieName and cookieDays control persistent sort state (which cookie to save as and for how long).  By default sort state is not saved, so this must be supplied for persistence.
 - includeTitles, titleFormula and titleSet control how titles appear (hover over tool tips--by default "Sort by [columnName]").
 - footerRowClass and exemptRowClass are the class names for TR elements which should be ignored for sorting purposes.
+- dateParseFunction allows you to override the native Date.parse function, nice if you have dd/mm/yyyy dates when your system expects mm/dd/yyyy.
 
 
-Dependancies
+Dependencies
 ------------
 	core:1.4.2/Events
 	core:1.4.2/Options
